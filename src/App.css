@@ -1,5 +1,14 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  background-attachment: fixed;
+  color: #333;
+}
+
 .App {
   text-align: center;
+  padding: 40px 20px; /* 增加上方的間距 */
 }
 
 .App-logo {
@@ -14,7 +23,10 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #ff9a9e;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +47,119 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ff6f61;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  background-color: #ff3d3d;
+  transform: scale(1.1);
+}
+
+.results {
+  margin-top: 30px;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: none;
+  background: none;
+}
+
+.results img {
+  border: 5px solid #ff6f61; /* 與玩家相同的設計，但使用不同的顏色 */
+  border-radius: 50%;
+  padding: 5px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 40px; /* 增加字體大小 */
+  color: #ff4500; /* 更鮮明的橘紅色 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.App::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://example.com/birthday-balloons.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.choice-image {
+  width: 60px;
+  height: 60px;
+}
+
+.reward {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 10px;
+  color: #856404;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #e63900;
 }
