@@ -163,3 +163,9 @@ h1, h2 {
 .reset-button:hover {
   background-color: #e63900;
 }
+
+.birthday-image {
+  width: auto;
+  height: auto;
+  margin: 20px 0;
+}

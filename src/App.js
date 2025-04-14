@@ -44,6 +44,7 @@ function App() {
         setReward('Line貼圖');
       } else if (currentWinCount === 3) {
         setReward('巧克力一份和Line貼圖');
+        alert('幸運兒 生日快樂!!'); // 確保在贏 3 次時彈出 alert
       }
     }
   };
@@ -72,7 +73,14 @@ function App() {
         </button>
       </div>
       <div className="results">
-        {computerChoice && (
+        {gameCount === 3 && winCount === 3 && (
+          <img
+            src={require('./assets/birthday_pic.jpg')}
+            alt="生日快樂"
+            className="birthday-image"
+          />
+        )}
+        {!(gameCount === 3 && winCount === 3) && computerChoice && (
           <img
             src={require(`./assets/${
               computerChoice === '剪刀' ? 'scissors' : computerChoice === '石頭' ? 'rock' : 'paper'
